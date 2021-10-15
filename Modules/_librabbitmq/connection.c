@@ -8,6 +8,12 @@
 #include <amqp.h>
 #include <amqp_tcp_socket.h>
 
+
+int
+amqp_simple_wait_frame_on_channel(amqp_connection_state_t state,
+                                  amqp_channel_t channel,
+                                  amqp_frame_t *decoded_frame);
+
 #include "connection.h"
 #include "distmeta.h"
 #include "_amqstate.h"
